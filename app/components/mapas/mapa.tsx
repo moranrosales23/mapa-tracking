@@ -3,10 +3,10 @@ import 'leaflet/dist/leaflet.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { ParamsData } from '../../interfaces/mapa.interface';
 import L from 'leaflet';
-
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH  ? process.env.NEXT_PUBLIC_BASE_PATH + '/' : '';
 export default function Mapa({ params }: { params: ParamsData[] }) {
   const custom = L.icon({
-  iconUrl: '/mark-red.png',
+  iconUrl: `${BASE_PATH}mark-red.png`,
   iconSize: [64, 64],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32]
@@ -33,7 +33,7 @@ export default function Mapa({ params }: { params: ParamsData[] }) {
                 <br />
                 <strong>Patente / Bus:</strong> {param.patente} / {param.identification}
                 <br />
-                <strong>Velocidad:</strong> {param.velocidad_final} km/h
+                <strong>Velocidad:</strong> <strong>{param.velocidad_final} km/h</strong>
                 <br />
                 <strong>Fecha y Hora:</strong> {param.device_datetime}
               </p>

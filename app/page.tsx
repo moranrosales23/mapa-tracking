@@ -7,7 +7,6 @@ import 'leaflet/dist/leaflet.css';
 export default function Home() {
   const searchParams = useSearchParams();
   const params: ParamsData[] = parseParams(searchParams.get('params'));
-  console.log(params);
   function parseParams(paramString: string | null | undefined) {
     if (!paramString) return null;
     try {
