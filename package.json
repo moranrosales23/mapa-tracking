@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export-docs": "next build && rmdir /s /q docs && rename out docs && echo. > docs\\.nojekyll"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
