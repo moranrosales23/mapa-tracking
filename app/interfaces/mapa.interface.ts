@@ -6,4 +6,5 @@ export interface ParamsData {
   identification: string;
   nombre_division: string;
   velocidad_final: number;
+  es_virlock: number;
 }

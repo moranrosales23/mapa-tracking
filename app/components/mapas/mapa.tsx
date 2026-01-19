@@ -36,6 +36,8 @@ export default function Mapa({ params }: { params: ParamsData[] }) {
                 <strong>Velocidad:</strong> <strong>{param.velocidad_final} km/h</strong>
                 <br />
                 <strong>Fecha y Hora:</strong> {param.device_datetime}
+                <br />
+                <strong>Dispositivo:</strong> {param.es_virlock === 1 ? 'Virlock' : 'Stonkam'}
               </p>
             </Popup>
           </Marker> 
