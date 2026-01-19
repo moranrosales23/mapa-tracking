@@ -37,7 +37,7 @@ export default function Mapa({ params }: { params: ParamsData[] }) {
                 <br />
                 <strong>Fecha y Hora:</strong> {param.device_datetime}
                 <br />
-                <strong>Dispositivo:</strong> {param.es_virlock === 1 ? 'Virlock' : 'Stonkam'}
+                {param.es_virlock !== undefined ? <><strong>Dispositivo:</strong> {param.es_virlock === 1 ? 'Virlock' : 'Stonkam'}</> : ''}
               </p>
             </Popup>
           </Marker> 
